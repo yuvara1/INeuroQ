@@ -1,5 +1,6 @@
 {
   "name": "ineuro",
+  "homepage:"https://yuvara1.github.io/INeuroQ",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,6 +9,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
+    
   },
   "dependencies": {
     "aos": "^2.3.4",
