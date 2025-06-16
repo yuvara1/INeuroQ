@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react'
 import Navbar from '../Navbar/Navbar.jsx'
-import TeamImage from '../assets/team.jpeg'
+
 import CountUp, { useCountUp } from 'react-countup';
 import './Home.css'
 import AOS from 'aos'
@@ -20,6 +20,8 @@ import Government from '../assets/government.png'
 import Fintech from '../assets/fintech.png'
 import Healthcare from '../assets/healthcare.png'
 import FoodTech from '../assets/food.png'
+import Media from '../assets/media.png'
+import Trip from '../assets/trip.png'
 
 const sliderSteps = [
      {
@@ -120,7 +122,7 @@ function Home() {
                     <h3>We don’t just test software—we design intelligent QA ecosystems that scale with your business. Here’s how we do it differently:</h3>
                     <div className='slider'>
                          {sliderSteps.map((step, idx) => (
-                              <div className='slide-item' key={idx}>
+                              <div className='slide-item' key={idx} data-aos="fade-right" data-aos-duration="1000" data-aos-delay={idx * 200}     >
                                    <div className='slide-item-inner'>
                                         <div className='slide-item-front'>
                                              <h3 className='slide-item-h3'>{step.front}</h3>
@@ -137,7 +139,7 @@ function Home() {
                <div className="how-neuro-work">
                     <div className='neuro-one'>
                          <div className='neuro-side'>
-                              <div className='neuro-one-items'>
+                              <div className='neuro-one-items' data-aos="fade-right" data-aos-duration="1000" >
                                    <div>
                                         <GiNotebook className='neuro-icon' />
                                    </div>
@@ -147,7 +149,7 @@ function Home() {
                                    </div>
                               </div>
 
-                              <div className='neuro-one-items'>
+                              <div className='neuro-one-items' data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200"     >
                                    <div>
                                         <BsRocketTakeoff className='neuro-icon' />
                                    </div>
@@ -157,7 +159,7 @@ function Home() {
                                    </div>
                               </div>
 
-                              <div className='neuro-one-items'>
+                              <div className='neuro-one-items' data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400"          >
                                    <div>
                                         <FaUsersGear className='neuro-icon' />
                                    </div>
@@ -167,7 +169,7 @@ function Home() {
                                    </div>
                               </div>
 
-                              <div className='neuro-one-items'>
+                              <div className='neuro-one-items' data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600"          >
                                    <div>
                                         <BsStars className='neuro-icon' />
                                    </div>
@@ -176,7 +178,7 @@ function Home() {
                                         <p>Faster, smarter testing with AI-enhanced scripts</p>
                                    </div>
                               </div>
-                              <div className='neuro-one-items'>
+                              <div className='neuro-one-items' data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800"          >
                                    <div>
                                         <TbReport className='neuro-icon' />
                                    </div>
@@ -185,7 +187,7 @@ function Home() {
                                         <p>Real-time insights with actionable reports.</p>
                                    </div>
                               </div>
-                              <div className='neuro-one-items'>
+                              <div className='neuro-one-items' data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1000"          >
                                    <div>
                                         <VscDebugAltSmall className='neuro-icon' />
                                    </div>
@@ -194,7 +196,7 @@ function Home() {
                                         <p>Ensuring flawless software with rigorous validation.</p>
                                    </div>
                               </div>
-                              <div className='neuro-one-items'>
+                              <div className='neuro-one-items' data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1200"          >
                                    <div>
                                         <MdAssuredWorkload className='neuro-icon' />
                                    </div>
@@ -206,25 +208,25 @@ function Home() {
                          </div>
                     </div>
                     <div className='neuro-two'>
-                         <div className='neuro-two-items'>
+                         <div className='neuro-two-items' data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" >
                               <h1>How iNeuroQ Works ?</h1>
                               <div className='neuro-two-item-main'>
-                                   <div>
+                                   <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="700"  >
                                         <img src={RightArrow} alt="" />
                                         <p>Successful e-commerce adoption isn’t just about launching a digital store it’s about ensuring sustained customer adoption and growth.</p>
                                    </div>
 
-                                   <div>
+                                   <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900"  >
                                         <img src={RightArrow} alt="" />
                                         <p>At Wissend, we guide B2B distributors and manufacturers through this transformation with our dMAT (Digital Maturity Assessment & Transformation) Framework</p>
                                    </div>
-                                   <div>
+                                   <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1100"  >
                                         <img src={RightArrow} alt="" />
                                         <p>The dMAT framework is built on four key stages that guide businesses from assessment to execution, ensuring scalable and sustainable digital success.</p>
                                    </div>
                               </div>
                               <div>
-                                   <button className='neuro-btn' data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="500">Get Free Consultation</button>
+                                   <button className='neuro-btn' data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="1500">Get Free Consultation</button>
                               </div>
                          </div>
                     </div>
@@ -233,7 +235,7 @@ function Home() {
                     <h1>Industries We Serve </h1>
                     <div className='industury-items'>
                          <div className="container">
-                              <div className="card">
+                              <div className="card" >
                                    <div className="Box">
                                         <div className='Box-title'>
                                              <img src={Retail} alt="" />
@@ -267,6 +269,83 @@ function Home() {
                                                   <li><span>Solution:</span> implemented performance and security testing, simulated real-world shopping
                                                        conditions.</li>
                                                   <li><span>Result: </span>99.9% uptime during peak sales, 20% improvement in checkout speed.</li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div className="card">
+                                   <div className="Box">
+                                        <div className='Box-title'>
+                                             <img src={Media} alt="" />
+                                             <h2>Media & Entertainment</h2>
+                                        </div>
+                                        <h2>Delivering Seamless Digital Experiences for Viewers</h2>
+                                        <div className="Box-text">
+                                             <p>
+                                                  From OTT platforms to online gaming, streaming speed, content security, and cross-device
+                                                  compatibility define the user experience. We test video platforms, gaming apps, and digital
+                                                  content platforms for smooth performance.
+                                             </p>
+                                        </div>
+                                   </div>
+                                   <div className="details">
+                                        <div className="details-one">
+                                             <h3>
+                                                  How we Serve
+                                             </h3>
+                                             <ul>
+                                                  <li><span>Load Testing for High Concurrent Users –</span> Validate streaming quality for peak hours.</li>
+                                                  <li><span>Cross-Device Playback Testing -</span> Ensure seamless viewing across devices & resolutions.</li>
+                                                  <li><span>DRM & Security Testing – </span>Protect digital rights and prevent piracy.</li>
+                                                  <li><span>Interactive Feature Testing (VR/AR/Gaming) –</span>Validate performance of advanced entertainment technologies.</li>
+                                             </ul>
+                                        </div>
+                                        <div className="details-two">
+                                             <h3>Case Study</h3>
+                                             <ul>
+                                                  <li><span>Challenge:</span> A streaming service has buffering issues on mobile devices, leading to
+                                                       subscriber churn.</li>
+                                                  <li><span>Solution:</span> Optimized CDN usage, adaptive bitrate streaming, and mobile playback settings.</li>
+                                                  <li><span>Result: </span>50% reduction in buffering, 25% increase in user engagement.</li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div className="card">
+                                   <div className="Box">
+                                        <div className='Box-title'>
+                                             <img src={Trip} alt="" />
+                                             <h2>Travel & Leisure</h2>
+                                        </div>
+                                        <h2>Ensuring Hassle-Free Travel Booking Experiences</h2>
+                                        <div className="Box-text">
+                                             <p>
+                                                  Travel platforms must be fast, reliable, and secure, whether users are booking flights, hotels, or
+                                                  experiences. We help travel companies enhance booking flows, API integrations, and mobile
+                                                  usability.
+                                             </p>
+                                        </div>
+                                   </div>
+                                   <div className="details">
+                                        <div className="details-one">
+                                             <h3>
+                                                  How we Serve
+                                             </h3>
+                                             <ul>
+                                                  <li><span>Booking & Payment Flow Testing –</span> Validate transactions, discounts, and refund
+                                                       mechanisms.</li>
+                                                  <li><span>API Testing for Flight & Hotel Aggregators –</span> Ensure seamless 3rd-party service
+                                                       integrations.</li>
+                                                  <li><span>Multi-Language & Localization Testing –</span>Optimize UX for global travelers.</li>
+                                                  <li><span>Load Testing for Peak Season Traffic –</span>Guarantee stability during travel rush periods.</li>
+                                             </ul>
+                                        </div>
+                                        <div className="details-two">
+                                             <h3>Case Study</h3>
+                                             <ul>
+                                                  <li><span>Challenge:</span> A flight booking app suffered slow search results and payment failures.</li>
+                                                  <li><span>Solution:</span> Optimized backend queries, fixed payment gateway issues, and improved caching.</li>
+                                                  <li><span>Result: </span>60% faster booking experience, 15% higher conversion rates.</li>
                                              </ul>
                                         </div>
                                    </div>
@@ -316,7 +395,7 @@ function Home() {
                                              <img src={EdTech} alt="" />
                                              <h2>EdTech</h2>
                                         </div>
-                                        
+
                                         <h2>Ensuring Seamless & Scalable Online Learning</h2>
                                         <div className="Box-text">
                                              <p>
@@ -475,7 +554,7 @@ function Home() {
                                                        breaches.</li>
                                                   <li><span>Performance Testing for High-Traffic Portals –</span> Ensure uptime during tax filing and voter
                                                        registration periods.</li>
-          
+
                                                   <li><span>Interoperability Testing –</span> Ensure seamless integration between different government
                                                        systems.</li>
                                              </ul>
